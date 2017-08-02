@@ -1,4 +1,4 @@
-# WasteManagementCanada
+<title>WasteManagementCanada</title>
 WWI Summer School 17
 
 <h1>Use-Case Description:</h1>
