@@ -1,7 +1,7 @@
 # WasteManagementCanada
 WWI Summer School 17
 
-Use-Case Description:
+<h1>Use-Case Description:</h1>
 <b>Problem</b> <br>
 Waste Management is an integral part of every municipality. Most current systems lack insight into their management solutions. Without insight into live statistics about different conditions of the waste produced in homes, the system is handicapped as to how efficient it can be, leading to a lot of wasted resources and labor hours.
 
