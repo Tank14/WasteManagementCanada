@@ -1,5 +1,5 @@
-<title>WasteManagementCanada</title>
-WWI Summer School 17
+<h1>WasteManagementCanada</h1>
+<h4>WWI Summer School 17</h4>
 
 <h1>Use-Case Description:</h1>
 <b>Problem</b> <br>
