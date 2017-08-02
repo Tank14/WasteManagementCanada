@@ -1,0 +1,513 @@
+WARNING: Running python applications through 'pyspark' is deprecated as of Spark 1.0.
+Use ./bin/spark-submit <python file>
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+:: loading settings :: url = jar:file:/opt/spark-1.6.3-bin-hadoop2.6/lib/spark-assembly-1.6.3-hadoop2.6.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+com.databricks#spark-csv_2.10 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent;1.0
+	confs: [default]
+	found com.databricks#spark-csv_2.10;1.3.0 in central
+	found org.apache.commons#commons-csv;1.1 in central
+	found com.univocity#univocity-parsers;1.5.1 in central
+:: resolution report :: resolve 362ms :: artifacts dl 40ms
+	:: modules in use:
+	com.databricks#spark-csv_2.10;1.3.0 from central in [default]
+	com.univocity#univocity-parsers;1.5.1 from central in [default]
+	org.apache.commons#commons-csv;1.1 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   0   |   0   |   0   ||   3   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent
+	confs: [default]
+	0 artifacts copied, 3 already retrieved (0kB/7ms)
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+17/08/02 16:52:15 INFO SparkContext: Running Spark version 1.6.3
+17/08/02 16:52:15 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/08/02 16:52:15 WARN Utils: Your hostname, Abdul resolves to a loopback address: 127.0.1.1; using 192.168.217.149 instead (on interface ens33)
+17/08/02 16:52:15 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+17/08/02 16:52:15 INFO SecurityManager: Changing view acls to: root
+17/08/02 16:52:15 INFO SecurityManager: Changing modify acls to: root
+17/08/02 16:52:15 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(root); users with modify permissions: Set(root)
+17/08/02 16:52:16 INFO Utils: Successfully started service 'sparkDriver' on port 33059.
+17/08/02 16:52:17 INFO Slf4jLogger: Slf4jLogger started
+17/08/02 16:52:17 INFO Remoting: Starting remoting
+17/08/02 16:52:17 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.217.149:46395]
+17/08/02 16:52:17 INFO Utils: Successfully started service 'sparkDriverActorSystem' on port 46395.
+17/08/02 16:52:17 INFO SparkEnv: Registering MapOutputTracker
+17/08/02 16:52:17 INFO SparkEnv: Registering BlockManagerMaster
+17/08/02 16:52:17 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-45c755a9-37f7-483a-8bfd-e1f0aec5ae27
+17/08/02 16:52:17 INFO MemoryStore: MemoryStore started with capacity 511.1 MB
+17/08/02 16:52:17 INFO SparkEnv: Registering OutputCommitCoordinator
+17/08/02 16:52:17 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+17/08/02 16:52:17 INFO SparkUI: Started SparkUI at http://192.168.217.149:4040
+17/08/02 16:52:17 INFO HttpFileServer: HTTP File server directory is /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/httpd-5a920d31-0741-4203-b37a-789d53646677
+17/08/02 16:52:17 INFO HttpServer: Starting HTTP Server
+17/08/02 16:52:17 INFO Utils: Successfully started service 'HTTP file server' on port 45662.
+17/08/02 16:52:17 INFO SparkContext: Added JAR file:/root/.ivy2/jars/com.databricks_spark-csv_2.10-1.3.0.jar at http://192.168.217.149:45662/jars/com.databricks_spark-csv_2.10-1.3.0.jar with timestamp 1501707137933
+17/08/02 16:52:17 INFO SparkContext: Added JAR file:/root/.ivy2/jars/org.apache.commons_commons-csv-1.1.jar at http://192.168.217.149:45662/jars/org.apache.commons_commons-csv-1.1.jar with timestamp 1501707137935
+17/08/02 16:52:17 INFO SparkContext: Added JAR file:/root/.ivy2/jars/com.univocity_univocity-parsers-1.5.1.jar at http://192.168.217.149:45662/jars/com.univocity_univocity-parsers-1.5.1.jar with timestamp 1501707137935
+17/08/02 16:52:18 INFO Utils: Copying /root/IoT/Project/Garbage/Project.py to /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/Project.py
+17/08/02 16:52:19 INFO SparkContext: Added file file:/root/IoT/Project/Garbage/Project.py at file:/root/IoT/Project/Garbage/Project.py with timestamp 1501707138924
+17/08/02 16:52:19 INFO Utils: Copying /root/.ivy2/jars/com.databricks_spark-csv_2.10-1.3.0.jar to /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/com.databricks_spark-csv_2.10-1.3.0.jar
+17/08/02 16:52:19 INFO SparkContext: Added file file:/root/.ivy2/jars/com.databricks_spark-csv_2.10-1.3.0.jar at file:/root/.ivy2/jars/com.databricks_spark-csv_2.10-1.3.0.jar with timestamp 1501707139636
+17/08/02 16:52:19 INFO Utils: Copying /root/.ivy2/jars/org.apache.commons_commons-csv-1.1.jar to /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/org.apache.commons_commons-csv-1.1.jar
+17/08/02 16:52:19 INFO SparkContext: Added file file:/root/.ivy2/jars/org.apache.commons_commons-csv-1.1.jar at file:/root/.ivy2/jars/org.apache.commons_commons-csv-1.1.jar with timestamp 1501707139654
+17/08/02 16:52:19 INFO Utils: Copying /root/.ivy2/jars/com.univocity_univocity-parsers-1.5.1.jar to /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/com.univocity_univocity-parsers-1.5.1.jar
+17/08/02 16:52:19 INFO SparkContext: Added file file:/root/.ivy2/jars/com.univocity_univocity-parsers-1.5.1.jar at file:/root/.ivy2/jars/com.univocity_univocity-parsers-1.5.1.jar with timestamp 1501707139681
+17/08/02 16:52:20 INFO Executor: Starting executor ID driver on host localhost
+17/08/02 16:52:20 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43925.
+17/08/02 16:52:20 INFO NettyBlockTransferService: Server created on 43925
+17/08/02 16:52:20 INFO BlockManagerMaster: Trying to register BlockManager
+17/08/02 16:52:20 INFO BlockManagerMasterEndpoint: Registering block manager localhost:43925 with 511.1 MB RAM, BlockManagerId(driver, localhost, 43925)
+17/08/02 16:52:20 INFO BlockManagerMaster: Registered BlockManager
+17/08/02 16:52:20 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 208.5 KB, free 510.9 MB)
+17/08/02 16:52:20 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 19.3 KB, free 510.9 MB)
+17/08/02 16:52:20 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:43925 (size: 19.3 KB, free: 511.1 MB)
+17/08/02 16:52:20 INFO SparkContext: Created broadcast 0 from textFile at NativeMethodAccessorImpl.java:-2
+17/08/02 16:52:21 INFO FileInputFormat: Total input paths to process : 1
+17/08/02 16:52:21 INFO SparkContext: Starting job: reduce at /root/IoT/Project/Garbage/Project.py:87
+17/08/02 16:52:21 INFO DAGScheduler: Registering RDD 3 (reduceByKey at /root/IoT/Project/Garbage/Project.py:70)
+17/08/02 16:52:21 INFO DAGScheduler: Got job 0 (reduce at /root/IoT/Project/Garbage/Project.py:87) with 1 output partitions
+17/08/02 16:52:21 INFO DAGScheduler: Final stage: ResultStage 1 (reduce at /root/IoT/Project/Garbage/Project.py:87)
+17/08/02 16:52:21 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+17/08/02 16:52:21 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+17/08/02 16:52:21 INFO DAGScheduler: Submitting ShuffleMapStage 0 (PairwiseRDD[3] at reduceByKey at /root/IoT/Project/Garbage/Project.py:70), which has no missing parents
+17/08/02 16:52:21 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 10.0 KB, free 510.9 MB)
+17/08/02 16:52:21 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.3 KB, free 510.9 MB)
+17/08/02 16:52:21 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:43925 (size: 6.3 KB, free: 511.1 MB)
+17/08/02 16:52:21 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+17/08/02 16:52:21 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 0 (PairwiseRDD[3] at reduceByKey at /root/IoT/Project/Garbage/Project.py:70)
+17/08/02 16:52:21 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+17/08/02 16:52:21 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2659 bytes)
+17/08/02 16:52:21 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+17/08/02 16:52:21 INFO Executor: Fetching file:/root/.ivy2/jars/com.univocity_univocity-parsers-1.5.1.jar with timestamp 1501707139681
+17/08/02 16:52:21 INFO Utils: /root/.ivy2/jars/com.univocity_univocity-parsers-1.5.1.jar has been previously copied to /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/com.univocity_univocity-parsers-1.5.1.jar
+17/08/02 16:52:21 INFO Executor: Fetching file:/root/IoT/Project/Garbage/Project.py with timestamp 1501707138924
+17/08/02 16:52:21 INFO Utils: /root/IoT/Project/Garbage/Project.py has been previously copied to /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/Project.py
+17/08/02 16:52:21 INFO Executor: Fetching file:/root/.ivy2/jars/org.apache.commons_commons-csv-1.1.jar with timestamp 1501707139654
+17/08/02 16:52:21 INFO Utils: /root/.ivy2/jars/org.apache.commons_commons-csv-1.1.jar has been previously copied to /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/org.apache.commons_commons-csv-1.1.jar
+17/08/02 16:52:21 INFO Executor: Fetching file:/root/.ivy2/jars/com.databricks_spark-csv_2.10-1.3.0.jar with timestamp 1501707139636
+17/08/02 16:52:21 INFO Utils: /root/.ivy2/jars/com.databricks_spark-csv_2.10-1.3.0.jar has been previously copied to /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/com.databricks_spark-csv_2.10-1.3.0.jar
+17/08/02 16:52:21 INFO Executor: Fetching http://192.168.217.149:45662/jars/org.apache.commons_commons-csv-1.1.jar with timestamp 1501707137935
+17/08/02 16:52:21 INFO Utils: Fetching http://192.168.217.149:45662/jars/org.apache.commons_commons-csv-1.1.jar to /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/fetchFileTemp2008451609027944958.tmp
+17/08/02 16:52:21 INFO Utils: /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/fetchFileTemp2008451609027944958.tmp has been previously copied to /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/org.apache.commons_commons-csv-1.1.jar
+17/08/02 16:52:21 INFO Executor: Adding file:/tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/org.apache.commons_commons-csv-1.1.jar to class loader
+17/08/02 16:52:21 INFO Executor: Fetching http://192.168.217.149:45662/jars/com.databricks_spark-csv_2.10-1.3.0.jar with timestamp 1501707137933
+17/08/02 16:52:21 INFO Utils: Fetching http://192.168.217.149:45662/jars/com.databricks_spark-csv_2.10-1.3.0.jar to /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/fetchFileTemp2998369513064504870.tmp
+17/08/02 16:52:21 INFO Utils: /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/fetchFileTemp2998369513064504870.tmp has been previously copied to /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/com.databricks_spark-csv_2.10-1.3.0.jar
+17/08/02 16:52:21 INFO Executor: Adding file:/tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/com.databricks_spark-csv_2.10-1.3.0.jar to class loader
+17/08/02 16:52:21 INFO Executor: Fetching http://192.168.217.149:45662/jars/com.univocity_univocity-parsers-1.5.1.jar with timestamp 1501707137935
+17/08/02 16:52:21 INFO Utils: Fetching http://192.168.217.149:45662/jars/com.univocity_univocity-parsers-1.5.1.jar to /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/fetchFileTemp6297676921718893277.tmp
+17/08/02 16:52:21 INFO Utils: /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/fetchFileTemp6297676921718893277.tmp has been previously copied to /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/com.univocity_univocity-parsers-1.5.1.jar
+17/08/02 16:52:21 INFO Executor: Adding file:/tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/userFiles-dd8f6b5a-4a1c-405a-baa3-1e0b51bb20b6/com.univocity_univocity-parsers-1.5.1.jar to class loader
+17/08/02 16:52:21 INFO HadoopRDD: Input split: file:/root/IoT/Project/Garbage/source/MyData_8000.csv:0+323309
+17/08/02 16:52:21 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+17/08/02 16:52:21 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+17/08/02 16:52:21 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+17/08/02 16:52:21 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+17/08/02 16:52:21 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+17/08/02 16:52:22 INFO PythonRunner: Times: total = 1070, boot = 873, init = 32, finish = 165
+17/08/02 16:52:22 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2317 bytes result sent to driver
+17/08/02 16:52:22 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1512 ms on localhost (1/1)
+17/08/02 16:52:22 INFO DAGScheduler: ShuffleMapStage 0 (reduceByKey at /root/IoT/Project/Garbage/Project.py:70) finished in 1.538 s
+17/08/02 16:52:22 INFO DAGScheduler: looking for newly runnable stages
+17/08/02 16:52:22 INFO DAGScheduler: running: Set()
+17/08/02 16:52:22 INFO DAGScheduler: waiting: Set(ResultStage 1)
+17/08/02 16:52:22 INFO DAGScheduler: failed: Set()
+17/08/02 16:52:22 INFO DAGScheduler: Submitting ResultStage 1 (PythonRDD[6] at reduce at /root/IoT/Project/Garbage/Project.py:87), which has no missing parents
+17/08/02 16:52:22 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+17/08/02 16:52:22 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 6.3 KB, free 510.9 MB)
+17/08/02 16:52:22 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 4.0 KB, free 510.9 MB)
+17/08/02 16:52:23 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:43925 (size: 4.0 KB, free: 511.1 MB)
+17/08/02 16:52:23 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+17/08/02 16:52:23 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (PythonRDD[6] at reduce at /root/IoT/Project/Garbage/Project.py:87)
+17/08/02 16:52:23 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+17/08/02 16:52:23 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,NODE_LOCAL, 2409 bytes)
+17/08/02 16:52:23 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+17/08/02 16:52:23 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 1 blocks
+17/08/02 16:52:23 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 6 ms
+17/08/02 16:52:23 INFO PythonRunner: Times: total = 27, boot = -153, init = 169, finish = 11
+17/08/02 16:52:23 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1246 bytes result sent to driver
+17/08/02 16:52:23 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 74 ms on localhost (1/1)
+17/08/02 16:52:23 INFO DAGScheduler: ResultStage 1 (reduce at /root/IoT/Project/Garbage/Project.py:87) finished in 0.075 s
+17/08/02 16:52:23 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+17/08/02 16:52:23 INFO DAGScheduler: Job 0 finished: reduce at /root/IoT/Project/Garbage/Project.py:87, took 1.812825 s
+17/08/02 16:52:23 INFO SparkContext: Starting job: reduce at /root/IoT/Project/Garbage/Project.py:90
+17/08/02 16:52:23 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 143 bytes
+17/08/02 16:52:23 INFO DAGScheduler: Got job 1 (reduce at /root/IoT/Project/Garbage/Project.py:90) with 1 output partitions
+17/08/02 16:52:23 INFO DAGScheduler: Final stage: ResultStage 3 (reduce at /root/IoT/Project/Garbage/Project.py:90)
+17/08/02 16:52:23 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+17/08/02 16:52:23 INFO DAGScheduler: Missing parents: List()
+17/08/02 16:52:23 INFO DAGScheduler: Submitting ResultStage 3 (PythonRDD[7] at reduce at /root/IoT/Project/Garbage/Project.py:90), which has no missing parents
+17/08/02 16:52:23 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 6.3 KB, free 510.9 MB)
+17/08/02 16:52:23 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.0 KB, free 510.9 MB)
+17/08/02 16:52:23 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:43925 (size: 4.0 KB, free: 511.1 MB)
+17/08/02 16:52:23 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1006
+17/08/02 16:52:23 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (PythonRDD[7] at reduce at /root/IoT/Project/Garbage/Project.py:90)
+17/08/02 16:52:23 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks
+17/08/02 16:52:23 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 2, localhost, partition 0,NODE_LOCAL, 2409 bytes)
+17/08/02 16:52:23 INFO Executor: Running task 0.0 in stage 3.0 (TID 2)
+17/08/02 16:52:23 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 1 blocks
+17/08/02 16:52:23 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+17/08/02 16:52:23 INFO PythonRunner: Times: total = 52, boot = -82, init = 87, finish = 47
+17/08/02 16:52:23 INFO Executor: Finished task 0.0 in stage 3.0 (TID 2). 1246 bytes result sent to driver
+17/08/02 16:52:23 INFO DAGScheduler: ResultStage 3 (reduce at /root/IoT/Project/Garbage/Project.py:90) finished in 0.062 s
+17/08/02 16:52:23 INFO DAGScheduler: Job 1 finished: reduce at /root/IoT/Project/Garbage/Project.py:90, took 0.083684 s
+17/08/02 16:52:23 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 2) in 63 ms on localhost (1/1)
+17/08/02 16:52:23 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+17/08/02 16:52:23 INFO SparkContext: Starting job: foreach at /root/IoT/Project/Garbage/Project.py:100
+17/08/02 16:52:23 INFO DAGScheduler: Got job 2 (foreach at /root/IoT/Project/Garbage/Project.py:100) with 1 output partitions
+17/08/02 16:52:23 INFO DAGScheduler: Final stage: ResultStage 5 (foreach at /root/IoT/Project/Garbage/Project.py:100)
+17/08/02 16:52:23 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 4)
+17/08/02 16:52:23 INFO DAGScheduler: Missing parents: List()
+17/08/02 16:52:23 INFO DAGScheduler: Submitting ResultStage 5 (PythonRDD[8] at foreach at /root/IoT/Project/Garbage/Project.py:100), which has no missing parents
+17/08/02 16:52:23 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 7.1 KB, free 510.9 MB)
+17/08/02 16:52:23 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 4.5 KB, free 510.9 MB)
+17/08/02 16:52:23 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on localhost:43925 (size: 4.5 KB, free: 511.1 MB)
+17/08/02 16:52:23 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1006
+17/08/02 16:52:23 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (PythonRDD[8] at foreach at /root/IoT/Project/Garbage/Project.py:100)
+17/08/02 16:52:23 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks
+17/08/02 16:52:23 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 3, localhost, partition 0,NODE_LOCAL, 2409 bytes)
+17/08/02 16:52:23 INFO Executor: Running task 0.0 in stage 5.0 (TID 3)
+17/08/02 16:52:23 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 1 blocks
+17/08/02 16:52:23 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+Count for 43.9/-78.88: 85
+total cost for 43.9/-78.88 = $425
+
+Count for 43.89/-78.78: 34
+total cost for 43.89/-78.78 = $170
+
+Count for 43.91/-78.77: 19
+total cost for 43.91/-78.77 = $95
+
+Count for 43.89/-78.77: 14
+total cost for 43.89/-78.77 = $70
+
+Count for 43.93/-78.77: 6
+total cost for 43.93/-78.77 = $30
+
+Count for 43.93/-78.79: 20
+total cost for 43.93/-78.79 = $100
+
+Count for 43.93/-78.78: 14
+total cost for 43.93/-78.78 = $70
+
+Count for 43.91/-78.79: 78
+total cost for 43.91/-78.79 = $390
+
+Count for 43.89/-78.79: 64
+total cost for 43.89/-78.79 = $320
+
+Count for 43.93/-78.9: 22
+total cost for 43.93/-78.9 = $110
+
+Count for 43.93/-78.8: 18
+total cost for 43.93/-78.8 = $90
+
+Count for 43.93/-78.88: 16
+total cost for 43.93/-78.88 = $80
+
+Count for 43.93/-78.89: 27
+total cost for 43.93/-78.89 = $135
+
+Count for 43.93/-78.81: 29
+total cost for 43.93/-78.81 = $145
+
+Count for 43.93/-78.82: 24
+total cost for 43.93/-78.82 = $120
+
+Count for 43.93/-78.83: 17
+total cost for 43.93/-78.83 = $85
+
+Count for 43.93/-78.84: 17
+total cost for 43.93/-78.84 = $85
+
+Count for 43.89/-78.91: 47
+total cost for 43.89/-78.91 = $235
+
+Count for 43.89/-78.92: 15
+total cost for 43.89/-78.92 = $75
+
+Count for 43.93/-78.87: 22
+total cost for 43.93/-78.87 = $110
+
+Count for 43.88/-78.9: 26
+total cost for 43.88/-78.9 = $130
+
+Count for 43.88/-78.8: 15
+total cost for 43.88/-78.8 = $75
+
+Count for 43.88/-78.81: 38
+total cost for 43.88/-78.81 = $190
+
+Count for 43.88/-78.82: 22
+total cost for 43.88/-78.82 = $110
+
+Count for 43.88/-78.83: 18
+total cost for 43.88/-78.83 = $90
+
+Count for 43.88/-78.84: 17
+total cost for 43.88/-78.84 = $85
+
+Count for 43.88/-78.85: 18
+total cost for 43.88/-78.85 = $90
+
+Count for 43.89/-78.89: 54
+total cost for 43.89/-78.89 = $270
+
+Count for 43.88/-78.87: 19
+total cost for 43.88/-78.87 = $95
+
+Count for 43.88/-78.88: 26
+total cost for 43.88/-78.88 = $130
+
+Count for 43.89/-78.86: 65
+total cost for 43.89/-78.86 = $325
+
+Count for 43.89/-78.85: 67
+total cost for 43.89/-78.85 = $335
+
+Count for 43.89/-78.84: 74
+total cost for 43.89/-78.84 = $370
+
+Count for 43.89/-78.83: 67
+total cost for 43.89/-78.83 = $335
+
+Count for 43.89/-78.82: 71
+total cost for 43.89/-78.82 = $355
+
+Count for 43.89/-78.81: 49
+total cost for 43.89/-78.81 = $245
+
+Count for 43.9/-78.9: 71
+total cost for 43.9/-78.9 = $355
+
+Count for 43.9/-78.8: 83
+total cost for 43.9/-78.8 = $415
+
+Count for 43.89/-78.8: 67
+total cost for 43.89/-78.8 = $335
+
+Count for 43.89/-78.9: 80
+total cost for 43.89/-78.9 = $400
+
+Count for 43.88/-78.79: 19
+total cost for 43.88/-78.79 = $95
+
+Count for 43.88/-78.78: 11
+total cost for 43.88/-78.78 = $55
+
+Count for 43.88/-78.77: 6
+total cost for 43.88/-78.77 = $30
+
+Count for 43.91/-78.78: 73
+total cost for 43.91/-78.78 = $365
+
+Count for 43.88/-78.86: 16
+total cost for 43.88/-78.86 = $80
+
+Count for 43.92/-78.78: 39
+total cost for 43.92/-78.78 = $195
+
+Count for 43.92/-78.79: 61
+total cost for 43.92/-78.79 = $305
+
+Count for 43.92/-78.77: 14
+total cost for 43.92/-78.77 = $70
+
+Count for 43.89/-78.88: 61
+total cost for 43.89/-78.88 = $305
+
+Count for 43.88/-78.92: 1
+total cost for 43.88/-78.92 = $5
+
+Count for 43.88/-78.91: 14
+total cost for 43.88/-78.91 = $70
+
+Count for 43.88/-78.89: 29
+total cost for 43.88/-78.89 = $145
+
+Count for 43.9/-78.91: 53
+total cost for 43.9/-78.91 = $265
+
+Count for 43.93/-78.91: 10
+total cost for 43.93/-78.91 = $50
+
+Count for 43.9/-78.92: 15
+total cost for 43.9/-78.92 = $75
+
+Count for 43.9/-78.82: 72
+total cost for 43.9/-78.82 = $360
+
+Count for 43.9/-78.83: 96
+total cost for 43.9/-78.83 = $480
+
+Count for 43.9/-78.81: 96
+total cost for 43.9/-78.81 = $480
+
+Count for 43.9/-78.86: 76
+total cost for 43.9/-78.86 = $380
+
+Count for 43.9/-78.87: 96
+total cost for 43.9/-78.87 = $480
+
+Count for 43.9/-78.84: 81
+total cost for 43.9/-78.84 = $405
+
+Count for 43.9/-78.85: 68
+total cost for 43.9/-78.85 = $340
+
+Count for 43.93/-78.92: 5
+total cost for 43.93/-78.92 = $25
+
+Count for 43.9/-78.89: 95
+total cost for 43.9/-78.89 = $475
+
+Count for 43.91/-78.9: 94
+total cost for 43.91/-78.9 = $470
+
+Count for 43.91/-78.8: 91
+total cost for 43.91/-78.8 = $455
+
+Count for 43.92/-78.91: 44
+total cost for 43.92/-78.91 = $220
+
+Count for 43.92/-78.92: 13
+total cost for 43.92/-78.92 = $65
+
+Count for 43.93/-78.85: 18
+total cost for 43.93/-78.85 = $90
+
+Count for 43.93/-78.86: 18
+total cost for 43.93/-78.86 = $90
+
+Count for 43.91/-78.88: 67
+total cost for 43.91/-78.88 = $335
+
+Count for 43.91/-78.89: 88
+total cost for 43.91/-78.89 = $440
+
+Count for 43.91/-78.86: 76
+total cost for 43.91/-78.86 = $380
+
+Count for 43.91/-78.87: 76
+total cost for 43.91/-78.87 = $380
+
+Count for 43.91/-78.84: 77
+total cost for 43.91/-78.84 = $385
+
+Count for 43.91/-78.85: 68
+total cost for 43.91/-78.85 = $340
+
+Count for 43.91/-78.82: 84
+total cost for 43.91/-78.82 = $420
+
+Count for 43.91/-78.83: 69
+total cost for 43.91/-78.83 = $345
+
+Count for 43.91/-78.81: 57
+total cost for 43.91/-78.81 = $285
+
+Count for 43.92/-78.87: 54
+total cost for 43.92/-78.87 = $270
+
+Count for 43.92/-78.86: 67
+total cost for 43.92/-78.86 = $335
+
+Count for 43.92/-78.85: 71
+total cost for 43.92/-78.85 = $355
+
+Count for 43.92/-78.84: 67
+total cost for 43.92/-78.84 = $335
+
+Count for 43.92/-78.83: 66
+total cost for 43.92/-78.83 = $330
+
+Count for 43.92/-78.82: 76
+total cost for 43.92/-78.82 = $380
+
+Count for 43.92/-78.81: 54
+total cost for 43.92/-78.81 = $270
+
+Count for 43.92/-78.89: 62
+total cost for 43.92/-78.89 = $310
+
+Count for 43.92/-78.88: 69
+total cost for 43.92/-78.88 = $345
+
+Count for 43.91/-78.91: 60
+total cost for 43.91/-78.91 = $300
+
+Count for 43.92/-78.8: 58
+total cost for 43.92/-78.8 = $290
+
+Count for 43.92/-78.9: 69
+total cost for 43.92/-78.9 = $345
+
+Count for 43.9/-78.79: 77
+total cost for 43.9/-78.79 = $385
+
+Count for 43.9/-78.78: 63
+total cost for 43.9/-78.78 = $315
+
+Count for 43.9/-78.77: 15
+total cost for 43.9/-78.77 = $75
+
+Count for 43.91/-78.92: 25
+total cost for 43.91/-78.92 = $125
+
+Count for 43.89/-78.87: 62
+total cost for 43.89/-78.87 = $310
+17/08/02 16:52:23 INFO PythonRunner: Times: total = 19, boot = -31, init = 38, finish = 12
+17/08/02 16:52:23 INFO Executor: Finished task 0.0 in stage 5.0 (TID 3). 1245 bytes result sent to driver
+17/08/02 16:52:23 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 3) in 34 ms on localhost (1/1)
+17/08/02 16:52:23 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+17/08/02 16:52:23 INFO DAGScheduler: ResultStage 5 (foreach at /root/IoT/Project/Garbage/Project.py:100) finished in 0.036 s
+17/08/02 16:52:23 INFO DAGScheduler: Job 2 finished: foreach at /root/IoT/Project/Garbage/Project.py:100, took 0.048866 s
+
+
+total cost: $22985
+
+
+total pickup points: 4597
+17/08/02 16:52:23 INFO SparkContext: Starting job: saveAsTextFile at NativeMethodAccessorImpl.java:-2
+17/08/02 16:52:23 INFO DAGScheduler: Got job 3 (saveAsTextFile at NativeMethodAccessorImpl.java:-2) with 1 output partitions
+17/08/02 16:52:23 INFO DAGScheduler: Final stage: ResultStage 6 (saveAsTextFile at NativeMethodAccessorImpl.java:-2)
+17/08/02 16:52:23 INFO DAGScheduler: Parents of final stage: List()
+17/08/02 16:52:23 INFO DAGScheduler: Missing parents: List()
+17/08/02 16:52:23 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[11] at saveAsTextFile at NativeMethodAccessorImpl.java:-2), which has no missing parents
+17/08/02 16:52:23 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 69.1 KB, free 510.8 MB)
+17/08/02 16:52:23 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 25.5 KB, free 510.8 MB)
+17/08/02 16:52:23 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on localhost:43925 (size: 25.5 KB, free: 511.1 MB)
+17/08/02 16:52:23 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1006
+17/08/02 16:52:23 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 6 (MapPartitionsRDD[11] at saveAsTextFile at NativeMethodAccessorImpl.java:-2)
+17/08/02 16:52:23 INFO TaskSchedulerImpl: Adding task set 6.0 with 1 tasks
+17/08/02 16:52:23 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 4, localhost, partition 0,PROCESS_LOCAL, 2670 bytes)
+17/08/02 16:52:23 INFO Executor: Running task 0.0 in stage 6.0 (TID 4)
+17/08/02 16:52:23 INFO HadoopRDD: Input split: file:/root/IoT/Project/Garbage/source/MyData_8000.csv:0+323309
+17/08/02 16:52:23 INFO PythonRunner: Times: total = 106, boot = -393, init = 417, finish = 82
+17/08/02 16:52:23 INFO FileOutputCommitter: Saved output of task 'attempt_201708021652_0006_m_000000_4' to file:/root/IoT/Project/Garbage/result/_temporary/0/task_201708021652_0006_m_000000
+17/08/02 16:52:23 INFO SparkHadoopMapRedUtil: attempt_201708021652_0006_m_000000_4: Committed
+17/08/02 16:52:23 INFO Executor: Finished task 0.0 in stage 6.0 (TID 4). 2401 bytes result sent to driver
+17/08/02 16:52:23 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 4) in 238 ms on localhost (1/1)
+17/08/02 16:52:23 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+17/08/02 16:52:23 INFO DAGScheduler: ResultStage 6 (saveAsTextFile at NativeMethodAccessorImpl.java:-2) finished in 0.225 s
+17/08/02 16:52:23 INFO DAGScheduler: Job 3 finished: saveAsTextFile at NativeMethodAccessorImpl.java:-2, took 0.296465 s
+17/08/02 16:52:23 INFO SparkUI: Stopped Spark web UI at http://192.168.217.149:4040
+17/08/02 16:52:23 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+17/08/02 16:52:23 INFO MemoryStore: MemoryStore cleared
+17/08/02 16:52:23 INFO BlockManager: BlockManager stopped
+17/08/02 16:52:23 INFO BlockManagerMaster: BlockManagerMaster stopped
+17/08/02 16:52:23 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+17/08/02 16:52:23 INFO RemoteActorRefProvider$RemotingTerminator: Shutting down remote daemon.
+17/08/02 16:52:23 INFO RemoteActorRefProvider$RemotingTerminator: Remote daemon shut down; proceeding with flushing remote transports.
+17/08/02 16:52:24 INFO SparkContext: Successfully stopped SparkContext
+17/08/02 16:52:24 INFO RemoteActorRefProvider$RemotingTerminator: Remoting shut down.
+17/08/02 16:52:24 INFO ShutdownHookManager: Shutdown hook called
+17/08/02 16:52:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/pyspark-7b5f51e3-d2f1-47af-b123-9d521f688aea
+17/08/02 16:52:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5
+17/08/02 16:52:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-88bd858e-de82-4420-a9c4-d6ad6ffbf6b5/httpd-5a920d31-0741-4203-b37a-789d53646677
