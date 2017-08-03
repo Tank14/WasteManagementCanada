@@ -33,4 +33,4 @@ Source File:<br>
 Note: This is a prototype. Statistics are currently displayed in the console. For a production environment, the solution would output data for further processing.
 
 <h2>Presentation</h2>
-For the HTML5 presentation, open "index.html" in the "presentation HTML5"-folder in oder to see the presentation.
+For the HTML5 presentation, open "index.html" in the "presentation HTML5"-folder in order to see the presentation.
