@@ -2,7 +2,7 @@ from pyspark import SparkContext
 from pyspark import SparkConf
 
 # you can modify this variable to specify the estimated cost from pick up point to another
-# in Canadaian Dollers assuming each stop will cost $5
+# in Canadaian Dollars assuming each stop will cost $5
 cost_per_stop = 5
 
 conf = (SparkConf()
@@ -57,7 +57,7 @@ def map_group(x):
 	return x
 
 # apply the filter rules
-#filterDD = filterDD.filter(filter_rules)
+filterDD = filterDD.filter(filter_rules)
 
 # apply the group mapping
 MapRDD = filterDD.map(map_group)
